@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: htpasswd
+
+resources:
+  - htpasswd-account.crd.yaml
+  - htpasswd.configmap.yaml
+  - htpasswd-controller.cr.yaml
+  - htpasswd-controller-sa.yaml
+  - htpasswd.users.yaml
+  - watcher/htpasswd.deployment.yaml
