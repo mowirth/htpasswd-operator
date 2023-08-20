@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"go.flangaapis.com/htpasswd-kubernetes-operator/htpasswd"
+	"htpasswd-operator/internal/operator"
 )
 
 var (
@@ -23,14 +23,13 @@ var (
 )
 
 func run(cmd *cobra.Command, _ []string) error {
-	l := listener.HtpasswdListener{
+	l := operator.HtpasswdOperator{
 		KubeConfig:   config.KubeConfigFile,
-		PasswordFile: config.HTPasswdFile,
+		PasswordFile: config.HtpasswdFile,
 		PidFile:      config.PIDFile,
-		Namespace:    config.Namespace,
 	}
 
-	if err := l.Init(); err != nil {
+	if err := l.Init(cmd.Context()); err != nil {
 		return err
 	}
 

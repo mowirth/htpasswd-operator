@@ -34,7 +34,6 @@ func init() {
 	})
 
 	rootCmd.AddCommand(runCmd)
-	rootCmd.AddCommand(generateCmd)
 }
 
 // Copied from some github issue which I can't find anymore unfortunately (somewhere around spf13/viper).
@@ -62,7 +61,7 @@ func bindEnvs(iface interface{}, parts ...string) {
 			keyDot := strings.Join(append(parts, tv), ".")
 			keyUnderscore := strings.Join(append(parts, tv), "_")
 			if err := viper.BindEnv(keyDot, strings.ToUpper(keyUnderscore)); err != nil {
-				logrus.Errorf("Failed to bind %v to %v: %v\n", keyDot, strings.ToUpper(keyUnderscore), err)
+				logrus.Errorf("Failed to bind %v to %v: %v", keyDot, strings.ToUpper(keyUnderscore), err)
 			}
 		}
 	}
