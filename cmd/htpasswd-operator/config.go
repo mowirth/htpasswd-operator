@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"strings"
 
@@ -9,8 +10,7 @@ import (
 )
 
 type Configuration struct {
-	HTPasswdFile   string `mapstructure:"htpasswd_file"`
-	Namespace      string `mapstructure:"namespace"`
+	HtpasswdFile   string `mapstructure:"htpasswd_file"`
 	KubeConfigFile string `mapstructure:"kube_config"`
 	PIDFile        string `mapstructure:"pid_file"`
 	LogLevel       string `mapstructure:"log_level"`
@@ -24,12 +24,8 @@ func (s *Configuration) Validate() error {
 
 	logrus.SetLevel(level)
 
-	if s.HTPasswdFile == "" {
-		return fmt.Errorf("htpasswd filepath must not be nil")
-	}
-
-	if s.Namespace == "" {
-		return fmt.Errorf("namespace must not be empty")
+	if s.HtpasswdFile == "" {
+		return fmt.Errorf("operator filepath must not be nil")
 	}
 
 	return nil
@@ -46,8 +42,9 @@ func (s *Configuration) Read() error {
 	viper.SetDefault("htpasswd_file", "./htpasswd")
 
 	if err := viper.ReadInConfig(); err != nil {
-		switch err.(type) {
-		case viper.ConfigFileNotFoundError:
+		var configFileNotFoundError viper.ConfigFileNotFoundError
+		switch {
+		case errors.As(err, &configFileNotFoundError):
 		default:
 			return err
 		}

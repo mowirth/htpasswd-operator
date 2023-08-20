@@ -22,17 +22,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build and push operator image
+      - name: Build and push image
         uses: docker/build-push-action@v2
         with:
           push: true
-          file: Dockerfile.watcher
+          file: Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: mowirth/htpasswd-operator:latest
-      - name: Build and push operator image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          file: Dockerfile.init
-          platforms: linux/amd64,linux/arm64
-          tags: mowirth/htpasswd-generator:latest
