@@ -1,4 +1,4 @@
-module htpasswd-operator
+module github.com/mowirth/htpasswd-operator
 
 go 1.20
 

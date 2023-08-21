@@ -1,7 +1,7 @@
 # Htpasswd Operator
 
 [![Github CI](https://github.com/mowirth/htpasswd-operator/actions/workflows/build.yaml/badge.svg)](https://github.com/mowirth/htpasswd-operator/actions/workflows/build.yaml)
-[![Go Report Card](https://goreportcard.com/badge/go.flangaapis.com/htpasswd-kubernetes-operator)](https://goreportcard.com/report/github.com/mowirth/htpasswd-operator)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mowirth/htpasswd-operator)](https://goreportcard.com/report/github.com/mowirth/htpasswd-operator)
 
 A small operator to automatically generate bcrypt htpasswd files from CRDs.
 This allows you to handle your htpasswd accounts as Kubernetes resources, and reuse existing secrets stored in kubernetes.
