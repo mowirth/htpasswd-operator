@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "htpasswd-operator/pkg/client/clientset/versioned"
-	flangav1 "htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
-	fakeflangav1 "htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1/fake"
+	clientset "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned"
+	flangav1 "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
+	fakeflangav1 "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

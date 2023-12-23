@@ -15,7 +15,7 @@ import (
 var config Configuration
 var (
 	rootCmd = &cobra.Command{
-		Use: "htpasswd-operator",
+		Use: "github.com/mowirth/htpasswd-operator",
 		Run: func(cmd *cobra.Command, args []string) {
 			if err := run(cmd, args); err != nil {
 				_, _ = fmt.Fprintln(os.Stderr, err.Error())

@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	"htpasswd-operator/pkg/apis/htpasswduser/v1"
-	"htpasswd-operator/pkg/client/clientset/versioned/scheme"
+	"github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
+	"github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/watch"

@@ -3,7 +3,7 @@
 package scheme
 
 import (
-	flangav1 "htpasswd-operator/pkg/apis/htpasswduser/v1"
+	flangav1 "github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/bep/debounce"
-	v1 "htpasswd-operator/pkg/apis/htpasswduser/v1"
+	v1 "github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 )
 
 var debounceSync = debounce.New(5 * time.Second)

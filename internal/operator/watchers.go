@@ -3,9 +3,9 @@ package operator
 import (
 	"context"
 
+	v1 "github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
+	"github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions"
 	"github.com/sirupsen/logrus"
-	v1 "htpasswd-operator/pkg/apis/htpasswduser/v1"
-	"htpasswd-operator/pkg/client/informers/externalversions"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"

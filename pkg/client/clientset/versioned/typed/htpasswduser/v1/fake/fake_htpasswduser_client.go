@@ -3,7 +3,7 @@
 package fake
 
 import (
-	v1 "htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
+	v1 "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

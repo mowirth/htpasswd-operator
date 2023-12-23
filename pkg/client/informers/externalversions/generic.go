@@ -5,7 +5,7 @@ package externalversions
 import (
 	"fmt"
 
-	"htpasswd-operator/pkg/apis/htpasswduser/v1"
+	"github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/tools/cache"
 )

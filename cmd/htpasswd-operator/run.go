@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/mowirth/htpasswd-operator/internal/operator"
 	"github.com/spf13/cobra"
-	"htpasswd-operator/internal/operator"
 )
 
 var (
 	runCmd = &cobra.Command{
 		Use:     "watch",
 		Short:   "Start Htpasswd Operator",
-		Example: "htpasswd-operator watch",
+		Example: "github.com/mowirth/htpasswd-operator watch",
 		Run: func(cmd *cobra.Command, args []string) {
 			if err := run(cmd, args); err != nil {
 				_, _ = fmt.Fprintln(os.Stderr, err)

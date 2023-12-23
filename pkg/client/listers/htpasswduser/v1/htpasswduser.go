@@ -3,7 +3,7 @@
 package v1
 
 import (
-	v12 "htpasswd-operator/pkg/apis/htpasswduser/v1"
+	v12 "github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/tools/cache"

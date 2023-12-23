@@ -5,8 +5,8 @@ package v1
 import (
 	"net/http"
 
-	"htpasswd-operator/pkg/apis/htpasswduser/v1"
-	"htpasswd-operator/pkg/client/clientset/versioned/scheme"
+	"github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
+	"github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/scheme"
 	"k8s.io/client-go/rest"
 )
 
