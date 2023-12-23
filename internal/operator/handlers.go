@@ -3,8 +3,8 @@ package operator
 import (
 	"context"
 
+	"github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 	"github.com/sirupsen/logrus"
-	"htpasswd-operator/pkg/apis/htpasswduser/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/cache"
 )

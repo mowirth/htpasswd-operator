@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	flangav1 "htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
+	flangav1 "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

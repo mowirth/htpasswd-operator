@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned"
+	htpasswdv1 "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
+	"github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions"
 	"github.com/sirupsen/logrus"
-	"htpasswd-operator/pkg/client/clientset/versioned"
-	htpasswdv1 "htpasswd-operator/pkg/client/clientset/versioned/typed/htpasswduser/v1"
-	"htpasswd-operator/pkg/client/informers/externalversions"
 	v13 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/runtime"

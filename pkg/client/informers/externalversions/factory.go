@@ -7,9 +7,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "htpasswd-operator/pkg/client/clientset/versioned"
-	htpasswduser "htpasswd-operator/pkg/client/informers/externalversions/htpasswduser"
-	internalinterfaces "htpasswd-operator/pkg/client/informers/externalversions/internalinterfaces"
+	versioned "github.com/mowirth/htpasswd-operator/pkg/client/clientset/versioned"
+	htpasswduser "github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions/htpasswduser"
+	internalinterfaces "github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions/internalinterfaces"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

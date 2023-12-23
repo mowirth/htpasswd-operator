@@ -3,8 +3,8 @@
 package htpasswduser
 
 import (
-	v1 "htpasswd-operator/pkg/client/informers/externalversions/htpasswduser/v1"
-	internalinterfaces "htpasswd-operator/pkg/client/informers/externalversions/internalinterfaces"
+	v1 "github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions/htpasswduser/v1"
+	internalinterfaces "github.com/mowirth/htpasswd-operator/pkg/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

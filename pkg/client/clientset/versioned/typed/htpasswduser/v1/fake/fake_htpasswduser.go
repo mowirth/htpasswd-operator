@@ -5,7 +5,7 @@ package fake
 import (
 	"context"
 
-	v12 "htpasswd-operator/pkg/apis/htpasswduser/v1"
+	v12 "github.com/mowirth/htpasswd-operator/pkg/apis/htpasswduser/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/types"
