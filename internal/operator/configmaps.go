@@ -2,7 +2,6 @@ package operator
 
 import (
 	"context"
-	"strings"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/cache"
@@ -38,13 +37,4 @@ func (s *HtpasswdOperator) retrieveConfigKey(ctx context.Context, ref *KeySource
 	}
 
 	return configMap.Data[ref.ConfigMapRef.Key], nil
-}
-
-func splitMetaNamespaceData(key string) (string, string) {
-	if strings.Contains(key, "/") {
-		split := strings.Split(key, "/")
-		return split[0], split[1]
-	}
-
-	return "", key
 }
